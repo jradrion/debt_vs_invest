@@ -30,5 +30,5 @@ Homepage = "https://github.com/YOUR_GITHUB_USERNAME/debt-vs-invest"
 Repository = "https://github.com/YOUR_GITHUB_USERNAME/debt-vs-invest"
 
 [project.scripts]
-debt-vs-invest = "debt_vs_invest.app:run_streamlit"
+debt-vs-invest = "debt_vs_invest.launcher:main"
 debt-vs-invest-cli = "debt_vs_invest.app:main_cli"

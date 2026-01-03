@@ -194,39 +194,3 @@ debt-vs-invest-cli \
 ```
 
 > The Streamlit UI is the intended primary interface.
-
----
-
-## Suggested repo contents
-
-A minimal repo typically includes:
-
-- `pyproject.toml`
-- `debt_vs_invest/app.py`
-- `README.md`
-- `LICENSE`
-- `.gitignore`
-
-If you want Streamlit itself to default to dark theme, you can add:
-
-**`.streamlit/config.toml`**
-```toml
-[theme]
-base="dark"
-```
-
----
-
-## License
-
-MIT (recommended). See `LICENSE`.
-
----
-
-## Acknowledgements
-
-This project was inspired by common personal finance questions around whether to:
-- accelerate debt payoff (e.g., mortgage principal), or
-- invest surplus cash (e.g., broad index funds)
-
-If you extend the model (refinance, variable rates, contribution limits, state taxes, etc.), PRs are welcome.

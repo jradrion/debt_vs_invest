@@ -1456,21 +1456,6 @@ def run_streamlit_app():
 # -----------------------------
 
 
-def run_streamlit():
-    """
-    Console entrypoint: `debt-vs-invest`
-    Runs Streamlit pointing at this file.
-    """
-    import os
-    import sys
-    from streamlit.web import cli as stcli
-
-    # Run: streamlit run <this_file>
-    this_file = os.path.abspath(__file__)
-    sys.argv = ["streamlit", "run", this_file]
-    sys.exit(stcli.main())
-
-
 def main_cli():
     """
     Console entrypoint: `debt-vs-invest-cli`
@@ -1479,6 +1464,11 @@ def main_cli():
     run_cli()
 
 
+# When Streamlit executes this file, render the app.
+if is_running_in_streamlit():
+    run_streamlit_app()
+
 if __name__ == "__main__":
-    # When invoked directly, default to Streamlit UX.
-    run_streamlit()
+    # For dev use:
+    #   streamlit run debt_vs_invest/app.py
+    print("Run with: streamlit run debt_vs_invest/app.py")
